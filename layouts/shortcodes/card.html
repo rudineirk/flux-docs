@@ -1,0 +1,7 @@
+{{ $link := .Get "link" }}
+{{ $size := default "3" (.Get "size") }}
+<div class="{{ if (eq $size "3") }}col-md-4{{ else }}col-md-3 col-sm-4{{ end }} fx-card">
+  <a href="{{ $link }}">
+    {{ .Inner }}
+  </a>
+</div>

@@ -1,0 +1,21 @@
+<div class="container page-content">
+  <div class="row">
+    {{ if .Params.hideSideMenu }}
+      <div class="col-sm-12">
+        {{- partial "tags.html" . -}}
+        {{- partial "toc.html" . -}}
+        {{ .Content }}
+      </div>
+    {{ else }}
+      <div class="col-md-4">
+        {{- partial "page-side-menu" . -}}
+      </div>
+      <div class="col-md-8 order-md-first">
+        {{- partial "tags.html" . -}}
+        {{- partial "toc.html" . -}}
+        {{ .Content }}
+      </div>
+    {{ end }}
+    {{- partial "back-to-top.html" . -}}
+  </div>
+</div>

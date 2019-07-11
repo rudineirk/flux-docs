@@ -1,0 +1,14 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "flux-docs"
+license = "MIT"
+licenselink = "https://github.com/rudineirk/flux-docs/blob/master/LICENSE"
+description = ""
+homepage = "https://github.com/rudineirk/flux-docs/"
+tags = []
+features = []
+min_version = "0.54"
+
+[author]
+  name = "Rudinei Goi Roecker"

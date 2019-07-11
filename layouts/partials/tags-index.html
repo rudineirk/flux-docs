@@ -1,0 +1,14 @@
+<div class="container tags-index">
+  {{ if eq .Kind "taxonomy" }}
+    <h3>{{ humanize .Title }}</h3>
+  {{ else if eq .Kind "taxonomyTerm" }}
+    <h3>{{ .Site.Params.tagsTitle }}</h3>
+  {{ end }}
+  <ul class="nav flex-column">
+    {{ range .Pages }}
+      <li class="nav-item page-index-link">
+        <a class="nav-link" href="{{ .RelPermalink }}">{{ humanize .Title}}</a>
+      </li>
+    {{ end }}
+  </ul>
+</div>

@@ -1,0 +1,19 @@
+{{ $url := .Get "url" }}
+{{ $width := default "" (.Get "width") }}
+{{ $height := default "" (.Get "height") }}
+{{ $controls := default "false" (.Get "controls") }}
+{{ $muted := default "true" (.Get "muted") }}
+{{ $autoplay := default "true" (.Get "autoplay") }}
+
+{{ $params := "" }}
+{{ $params = cond (ne $height "") (printf "%s%s%s%s" $params " height=\"" $height "\"") $params }}
+{{ $params = cond (ne $width "") (printf "%s%s%s%s" $params " width=\"" $width "\"") $params }}
+{{ $params = cond (eq $controls "true") (printf "%s%s" $params " controls") $params }}
+{{ $params = cond (eq $muted "true") (printf "%s%s" $params " muted") $params }}
+{{ $params = cond (eq $autoplay "true") (printf "%s%s" $params " autoplay loop") $params }}
+{{ $videoTag := printf "<video playsinline %s>" $params }}
+
+{{ $videoTag | safeHTML }}
+  <source src="{{ .Get "url" | relURL }}.webm" type="video/webm"/>
+  <source src="{{ .Get "url" | relURL }}.mp4" type="video/mp4" />
+</video>

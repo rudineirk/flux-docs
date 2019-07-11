@@ -1,0 +1,13 @@
+[{{ range $index, $page := .Site.Pages }}
+{{- if and (ne $page.Type "json") (and (ne .Kind "taxonomy") (ne .Kind "taxonomyTerm")) -}}
+{{- if and $index (gt $index 0) -}},{{- end }}
+{
+  "uri": "{{ $page.RelPermalink }}",
+  "title": "{{ htmlEscape $page.Title}}",
+  "section": "{{ if $page.IsPage }}{{ $page.Parent.Title }}{{ else if $page.IsHome }}{{ else }}{{ .Site.Home.Title }}{{ end }}",
+  "tags": [{{ range $tindex, $tag := $page.Params.tags }}{{ if $tindex }}, {{ end }}"{{ $tag| htmlEscape }}"{{ end }}],
+  "description": "{{ htmlEscape .Description}}",
+  "content": {{$page.Plain | jsonify}}
+}
+{{- end -}}
+{{- end -}}]

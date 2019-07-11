@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ .Page.Language | default "en" }}">
+  <head>
+    {{- partial "meta.html" . -}}
+    {{- partial "style.html" . -}}
+  </head>
+  <body>
+    {{- partial "header.html" . -}}
+    {{- partial "breadcrumbs.html" . -}}
+    {{ block "main" . }}
+    {{ end }}
+    {{- partial "footer.html" . -}}
+    {{- partial "scripts.html" . -}}
+  </body>
+</html>

@@ -1,0 +1,9 @@
+{{ if default true .Site.Params.pageTOC }}
+{{ $toc := default "true" .Page.Params.toc }}
+{{ if eq $toc "true" }}
+<div class="page-toc">
+  <label class="toc-label"><i class="fas fa-list-alt"></i> {{ T "tocLabel" }}</label>
+  {{ .TableOfContents }}
+</div>
+{{ end }}
+{{ end }}

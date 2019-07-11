@@ -1,0 +1,29 @@
+{{ $data := cond (eq .Site.IsMultiLingual true) (index .Site.Data .Site.Language.Lang) .Site.Data }}
+<a name="page-top"></a>
+<div class="bg-white border-bottom box-shadow">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 col-xs-12">
+        <a class="header-logo {{ if not .Site.Params.logoImage }}header-logo-text{{ end }}" href="{{ "/" | relLangURL }}">
+          {{ if .Site.Params.logoImage }}
+          <img src="{{ .Site.Params.logoImage | relURL }}" />
+          {{ else }}
+          {{ .Site.Params.logoText }}
+          {{ end }}
+        </a>
+      </div>
+      <div class="col-sm-9 col-xs-12 header-links">
+        <nav class="float-right">
+          <div class="container">
+            <div class="row">
+              {{ range $idx, $link := $data.header.links }}
+                {{ $linkURL := cond (or (hasPrefix $link.link "http") (hasPrefix $link.link "//")) $link.link (relURL $link.link) }}
+                <a class="text-dark col pb-3 pt-3 header-link" href="{{ $linkURL }}">{{ $link.title }}</a>
+              {{ end }}
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

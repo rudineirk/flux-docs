@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ .Page.Language | default "en" }}">
+  <head>
+    {{- partial "meta.html" . -}}
+    {{- partial "style.html" . -}}
+  </head>
+  <body>
+    {{- partial "header.html" . -}}
+    {{- partial "search-banner.html" . -}}
+    {{- partial "landing-cards.html" . -}}
+    <div class="container">
+      {{ .Content }}
+    </div>
+    {{- partial "footer.html" . -}}
+    {{- partial "scripts.html" . -}}
+  </body>
+</html>

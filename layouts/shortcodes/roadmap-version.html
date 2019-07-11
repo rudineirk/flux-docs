@@ -1,0 +1,5 @@
+<li class="roadmap-version-wrapper">
+<div class="roadmap-version {{ if .IsNamedParams -}}{{ if isset .Params "color" -}}{{ .Get "color" }}{{- end -}}{{- end -}}">
+{{ .Inner }}
+</div>
+</li>

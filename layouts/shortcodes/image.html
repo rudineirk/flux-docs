@@ -1,0 +1,12 @@
+{{ $url := .Get "url" }}
+{{ $alt := default "" (.Get "alt") }}
+{{ $width := default "" (.Get "width") }}
+{{ $height := default "" (.Get "height") }}
+
+{{ $params := "" }}
+{{ $params = cond (ne $alt "") (printf "%s%s%s%s" $params " alt=\"" $alt "\"") $params }}
+{{ $params = cond (ne $height "") (printf "%s%s%s%s" $params " height=\"" $height "\"") $params }}
+{{ $params = cond (ne $width "") (printf "%s%s%s%s" $params " width=\"" $width "\"") $params }}
+{{ $imageTag := printf "<img src='%s' %s />" $url $params }}
+
+{{ $imageTag | safeHTML }}

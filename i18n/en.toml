@@ -1,0 +1,41 @@
+[tocLabel]
+other = "Table of Contents"
+
+[tagsTitle]
+other = "Tags"
+
+[bannerTitle]
+other = "We are here to help you"
+
+[bannerSearchPlaceholder]
+other = "Type a topic to search"
+
+[searchPlaceholder]
+other = "Search"
+
+[indexTitle]
+other = "Pages"
+
+[pageSelectDesc]
+other = "You are in"
+
+[expandTitle]
+other = "Expand"
+
+[roadmapDone]
+other = "Done"
+
+[roadmapInProgress]
+other = "In progress"
+
+[roadmapPlanned]
+other = "Planned"
+
+[title-404]
+other = "Not found"
+
+[message-404]
+other = "Page not found, sorry"
+
+[go-to-homepage]
+other = "Go to homepage"

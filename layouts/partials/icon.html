@@ -1,0 +1,9 @@
+{{ $icon := .icon }}
+{{ $brand := default "" .brand }}
+{{ $color := default "" .color }}
+
+{{ if hasPrefix .icon "fa-" }}
+<i class="fx-icon {{ if (eq $brand "true") }}fab{{ else }}fas{{ end }} {{ $icon }}" {{ if $color }}style="color: {{ $color }}"{{ end }}></i>
+{{ else }}
+<img class="fx-icon" src="{{ .icon | relURL }}">
+{{ end }}

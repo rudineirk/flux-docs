@@ -1,0 +1,41 @@
+[tocLabel]
+other = "Índice"
+
+[tagsTitle]
+other = "Tags"
+
+[bannerTitle]
+other = "Estamos aqui para te ajudar"
+
+[bannerSearchPlaceholder]
+other = "Digite um tópico para procurar"
+
+[searchPlaceholder]
+other = "Pesquisar"
+
+[indexTitle]
+other = "Páginas"
+
+[pageSelectDesc]
+other = "Você está em"
+
+[expandTitle]
+other = "Expandir"
+
+[roadmapDone]
+other = "Completado"
+
+[roadmapInProgress]
+other = "Em andamento"
+
+[roadmapPlanned]
+other = "Planejado"
+
+[title-404]
+other = "Não encontrado"
+
+[message-404]
+other = "Página não encontrada, desculpe"
+
+[go-to-homepage]
+other = "Ir para página principal"

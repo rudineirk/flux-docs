@@ -1,0 +1,22 @@
+{{ if eq .Kind "taxonomy" }}
+  {{- partial "tags-index.html" . -}}
+{{ else if eq .Kind "taxonomyTerm" }}
+  {{- partial "tags-index.html" . -}}
+{{ else }}
+  {{ $autoindex := default true (index .Params "autoindex") }}
+  <div class="container page-content">
+    <div class="row">
+      <div class="col-sm-3">
+        {{- partial "list-side-menu" . -}}
+      </div>
+      <div class="col-sm-9">
+        {{- partial "tags.html" . -}}
+        {{ .Content }}
+        {{ if $autoindex }}
+          {{- partial "list-content-index" . -}}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+{{ end }}
+

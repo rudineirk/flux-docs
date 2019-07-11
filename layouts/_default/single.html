@@ -1,0 +1,7 @@
+{{ define "main" }}
+{{ if eq .Page.Params.layout "section" }}
+  {{- partial "layout-section.html" . -}}
+{{ else }}
+  {{- partial "layout-page.html" . -}}
+{{ end }}
+{{ end }}

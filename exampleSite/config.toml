@@ -1,0 +1,53 @@
+baseURL = "https://rudineirk.github.io/flux-docs/"
+languageCode = "en-US"
+defaultContentLanguage = "en"
+
+theme = "flux-docs"
+themesdir = "../.."
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir= true
+
+pygmentsCodefences = true
+pygmentsUseClasses = true
+pygmentsCodefencesGuessSyntax = true
+
+[params]
+  author = "Rudinei Goi Roecker"
+  logoImage = "/img/logo.svg"
+  bannerBgCSS = "radial-gradient(circle at 51% 4%,#0056aa,#1e456c)"
+  bannerTextLight = true
+  pageIconColor = "#333"
+
+  useChroma = true
+
+[outputs]
+home = ["HTML", "JSON"]
+
+[Languages]
+[Languages.en]
+title = "FluxDocs Theme"
+weight = 1
+languageCode = "en-US"
+languageName = "English"
+
+  [[Languages.en.headerLinks]]
+  link = "/en/tags/"
+  title = "Tags"
+
+  [[Languages.en.headerLinks]]
+  link = "https://github.com/rudineirk/hugo-theme-flex-docs/"
+  title = "Github"
+
+[Languages.pt]
+title = "Tema FluxDocs"
+weight = 2
+languageCode = "pt-BR"
+languageName = "Português"
+
+  [[Languages.pt.headerLinks]]
+  link = "/pt/tags/"
+  title = "Tags"
+
+  [[Languages.pt.headerLinks]]
+  link = "https://github.com/rudineirk/hugo-theme-flex-docs/"
+  title = "Github"

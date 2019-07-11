@@ -1,0 +1,21 @@
+{{ if .IsTranslated }}
+<div class="dropdown lang-selector">
+  <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+    {{ $codeSplit :=  split .Site.Params.LanguageCode "-" }}
+    {{ $size := len $codeSplit }}
+    {{ $langCode := index $codeSplit (add $size -1) }}
+    <img src="https://www.countryflags.io/{{ $langCode }}/flat/24.png" />
+  </button>
+  <div class="dropdown-menu dropdown-menu-right">
+    {{ range .AllTranslations }}
+      <a href="{{ .Permalink }}" class="dropdown-item">
+        {{ $codeSplit :=  split .Site.Params.LanguageCode "-" }}
+        {{ $size := len $codeSplit }}
+        {{ $langCode := index $codeSplit (add $size -1) }}
+        <img src="https://www.countryflags.io/{{ $langCode }}/flat/24.png" />
+        <span class="pl-2">{{ .Language.LanguageName }}</span>
+      </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

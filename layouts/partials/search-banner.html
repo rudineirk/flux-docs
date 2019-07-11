@@ -1,0 +1,15 @@
+{{ $bannerBgImage := default "" .Site.Params.bannerBgImage }}
+{{ $bannerBgCSS := default "" .Site.Params.bannerBgCSS }}
+{{ $sectionTag := "<section class=\"jumbotron text-center banner" }}
+{{ $sectionTag = cond (default false .Site.Params.bannerTextLight) (printf "%s%s%s" $sectionTag " text-white" "\"") (printf "%s%s" $sectionTag "\"") }}
+{{ $sectionTag = cond (ne $bannerBgImage "") (printf "%s%s%s%s" $sectionTag " style=\"background-image: url(" (relURL .Site.Params.bannerBgImage) ")\"" ) $sectionTag }}
+{{ $sectionTag = cond (ne $bannerBgCSS "") (printf "%s%s%s%s" $sectionTag " style=\"background-image: " .Site.Params.bannerBgCSS "\"" ) $sectionTag }}
+{{ $sectionTag = printf "%s%s" $sectionTag ">" }}
+
+{{ $sectionTag | safeHTML }}
+<!-- <section class="jumbotron text-center banner {{ if .Site.Params.bannerTextLight }}text-white{{ end }}" {{ if .Site.Params.bannerBgImage }}style="background-image: url({{ .Site.Params.bannerBgImage | relURL }})"{{ else if .Site.Params.bannerBgCSS }}background-image: {{ .Site.Params.bannerBgCSS | safeHTML }}{{ end }}> -->
+  <div class="container">
+    <h2 class="jumbotron-heading">{{ T "bannerTitle" }}</h2>
+    {{- partial "search-input.html" (dict "banner" "true" "placeholder" (T "bannerSearchPlaceholder")) -}}
+  </div>
+</section>
