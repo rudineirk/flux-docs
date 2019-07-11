@@ -25,7 +25,7 @@ it's built on this theme.
 - [ ] Buttons
 - [ ] Automatic next/prev buttons to navigate through menu entries
 - [ ] Attachments files
-- [ ] Searchable/paginated tables
+- [x] Searchable/paginated tables
 - [x] Roadmap shortcode
 - [x] Mermaid diagram (flowchart, sequence, gantt)
 - [ ] Customizable look and feel and themes variants
