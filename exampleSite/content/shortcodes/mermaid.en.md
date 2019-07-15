@@ -9,22 +9,22 @@ tags:
 
 ## Examples
 
-{{< mermaid align="left" >}}
+{{< mermaid align="center" >}}
 graph TD;
-	A[Hard edge] -->|Link text| B(Round edge)
-    B --> C{Decision}
-    C -->|One| D[Result one]
-    C -->|Two| E[Result two]
+  A[Hard edge] -->|Link text| B(Round edge)
+  B --> C{Decision}
+  C -->|One| D[Result one]
+  C -->|Two| E[Result two]
 {{< /mermaid >}}
 
 ## Usage
 
 ```
-{{</* mermaid align="left" */>}}
-graph LR;
-	A[Hard edge] -->|Link text| B(Round edge)
-    B --> C{Decision}
-    C -->|One| D[Result one]
-    C -->|Two| E[Result two]
+{{</* mermaid align="center" */>}}
+graph TD;
+  A[Hard edge] -->|Link text| B(Round edge)
+  B --> C{Decision}
+  C -->|One| D[Result one]
+  C -->|Two| E[Result two]
 {{</* /mermaid */>}}
 ```

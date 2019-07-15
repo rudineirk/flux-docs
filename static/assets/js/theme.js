@@ -18,3 +18,11 @@ $(document).ready(function () {
     })
   }
 })
+
+$(document).ready(function() {
+  $('.datatables ~ table').DataTable();
+});
+
+$(document).ready(function() {
+  mermaid.initialize({startOnLoad: true});
+});
