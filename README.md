@@ -23,7 +23,7 @@ it's built on this theme.
 - [x] Tip/Note/Info/Warning boxes
 - [x] Expand
 - [ ] Buttons
-- [ ] Automatic next/prev buttons to navigate through menu entries
+- [x] Automatic next/prev buttons to navigate through menu entries
 - [ ] Attachments files
 - [x] Searchable/paginated tables
 - [x] Roadmap shortcode

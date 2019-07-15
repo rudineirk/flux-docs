@@ -542,6 +542,43 @@ pre.chroma {
     padding-left: 50px;
   }
 }
+
+.page-footer {
+  margin-top: 20px;
+}
+
+.page-footer .nav-btn-container {
+  padding: 0;
+}
+
+.page-footer .btn {
+  font-size: 14px;
+  height: 100%;
+  width: 100%;
+  color: #767676;
+  background-color: transparent;
+}
+
+.page-footer .btn i {
+  font-size: 32px;
+  display: block;
+}
+
+.page-footer .btn:hover {
+  background-color: #F8FAFC;
+}
+
+.page-footer .btn.btn-disabled {
+  color: #ccc;
+}
+
+.page-footer .btn.btn-disabled i {
+  padding-bottom: 17px;
+}
+
+.page-footer .btn.btn-disabled:hover {
+  background-color: transparent;
+}
 /* ---------------- */
 
 /* roadmap */
