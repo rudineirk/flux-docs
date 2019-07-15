@@ -4,6 +4,9 @@ other = "Table of Contents"
 [tagsTitle]
 other = "Tags"
 
+[linkCopied]
+other = "Link copied to clipboard!"
+
 [bannerTitle]
 other = "We are here to help you"
 

@@ -1,12 +1,14 @@
 <script type="text/javascript">
   var baseurl = '{{ "/" | relLangURL }}';
   var showContentSearch = {{ .Site.Params.showContentSearch | default false }};
+  var linkCopiedText = {{ T "linkCopied" }};
 </script>
 <script type="text/javascript" src="{{"assets/vendor/jquery/jquery.min.js" | relURL}}?{{ now.Unix }}"></script>
 <script type="text/javascript" src="{{"assets/vendor/popper/popper.min.js" | relURL}}?{{ now.Unix }}"></script>
 <script type="text/javascript" src="{{"assets/vendor/bootstrap/bootstrap.min.js" | relURL}}?{{ now.Unix }}"></script>
 <script type="text/javascript" src="{{"assets/vendor/lunr/lunr.min.js" | relURL}}?{{ now.Unix }}"></script>
 <script type="text/javascript" src="{{"assets/vendor/auto-complete/auto-complete.min.js" | relURL}}?{{ now.Unix }}"></script>
+<script type="text/javascript" src="{{"assets/vendor/clipboard/clipboard.min.js" | relURL}}?{{ now.Unix }}"></script>
 <script type="text/javascript" src="{{"assets/vendor/datatables/jquery.datatables.min.js" | relURL}}?{{ now.Unix }}"></script>
 <script type="text/javascript" src="{{"assets/vendor/datatables/datatables.bootstrap4.min.js" | relURL}}?{{ now.Unix }}"></script>
 <script type="text/javascript" src="{{"assets/vendor/mermaid/mermaid.min.js" | relURL}}?{{ now.Unix }}"></script>
