@@ -1,4 +1,7 @@
-<div class="container page-content">
+{{ $fluid := (default false .Site.Params.fluid) }}
+{{ $fullmenu := (default false .Site.Params.fullmenu) }}
+
+<div class="container{{ if $fluid }}-fluid{{ end }} page-content {{ if $fluid }}page-content-fluid{{ end }}">
   <div class="row">
     {{ if .Params.hideSideMenu }}
       <div class="col-sm-12">
@@ -8,14 +11,18 @@
         {{- partial "page-footer.html" . -}}
       </div>
     {{ else }}
-      <div class="col-md-8">
+      <div class="{{ if $fluid }}col-xl-10 col-lg-9 col-sm-8{{ else }}col-md-8{{ end }}">
         {{- partial "tags.html" . -}}
         {{- partial "toc.html" . -}}
         {{ .Content }}
         {{- partial "page-footer.html" . -}}
       </div>
-      <div class="col-md-4">
-        {{- partial "page-side-menu" . -}}
+      <div class="{{ if (or $fluid $fullmenu) }}col-xl-2 col-lg-3 col-sm-4 order-first{{ else }}col-md-4{{ end }}">
+        {{ if $fullmenu }}
+          {{- partial "side-menu" . -}}
+        {{ else }}
+          {{- partial "page-side-menu" . -}}
+        {{ end }}
       </div>
     {{ end }}
     {{- partial "back-to-top.html" . -}}

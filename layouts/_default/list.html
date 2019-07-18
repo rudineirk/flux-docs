@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{- partial "breadcrumbs.html" . -}}
 {{ if eq .Page.Params.layout "page" }}
   {{- partial "layout-page.html" . -}}
 {{ else }}

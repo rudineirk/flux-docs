@@ -1,0 +1,47 @@
+{{ $current := . }}
+
+{{ if (default false .Site.Params.fullmenu) }}
+  <ul class="nav flex-column">
+    {{ $pages := .Site.Sections }}
+    {{ range $idx, $page := $pages }}
+      {{ template "menu-item" (dict "page" $page "current" $current) }}
+      {{ if (hasPrefix $current.RelPermalink $page.RelPermalink) }}
+        {{ template "submenu" (dict "page" $page "current" $current) }}
+      {{ end }}
+    {{ end }}
+  </ul>
+{{ else }}
+  <ul class="nav flex-column">
+    {{ $parent := cond .IsHome $current $current.Parent }}
+    {{ with $parent }}
+      {{ $pages := cond $parent.IsHome $parent.Sections ($parent.Pages | union $parent.Sections) }}
+      {{ range $idx, $page := $pages }}
+        {{ template "menu-item" (dict "page" $page "current" $current) }}
+      {{ end }}
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{ define "menu-item" }}
+  <li class="nav-item sidebar-link{{ if (hasPrefix .current.RelPermalink .page.RelPermalink) }} active{{ end }}">
+    <a class="nav-link" href="{{ .page.RelPermalink }}">
+      {{- partial "icon.html" (dict "icon" .page.Params.icon "color" (default .current.Site.Params.pageIconColor .page.Params.iconColor) "brand" (default false .page.Params.iconbrand)) -}}
+      {{ .page.Title }}
+    </a>
+  </li>
+{{ end }}
+
+{{ define "submenu" }}
+  {{ $current := .current }}
+  {{ $page := .page }}
+  <ul class="nav flex-column sidebar-submenu">
+    {{ range $idx, $subpage := ($page.Pages | union $page.Sections) }}
+      <li class="nav-item sidebar-link{{ if (hasPrefix $current.RelPermalink $subpage.RelPermalink) }} active{{ end }}">
+        <a class="nav-link" href="{{ $subpage.RelPermalink }}">
+          {{- partial "icon.html" (dict "icon" $subpage.Params.icon "color" (default $current.Site.Params.pageIconColor $subpage.Params.iconColor) "brand" (default false $subpage.Params.iconbrand)) -}}
+          {{ $subpage.Title }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

@@ -1,15 +1,18 @@
+{{ $fluid := (default false .Site.Params.fluid) }}
+{{ $fullmenu := (default false .Site.Params.fullmenu) }}
+
 {{ if eq .Kind "taxonomy" }}
   {{- partial "tags-index.html" . -}}
 {{ else if eq .Kind "taxonomyTerm" }}
   {{- partial "tags-index.html" . -}}
 {{ else }}
-  {{ $autoindex := default true (index .Params "autoindex") }}
-  <div class="container page-content">
+  {{ $autoindex := (default (not $fullmenu) (index .Params "autoindex")) }}
+  <div class="container{{ if $fluid }}-fluid{{ end }} page-content {{ if $fluid }}page-content-fluid{{ end }}">
     <div class="row">
-      <div class="col-sm-3">
-        {{- partial "list-side-menu" . -}}
+      <div class="{{ if $fluid }}col-xl-2 col-lg-3 col-sm-4{{ else }}col-lg-3 col-md-4{{ end }}">
+        {{- partial "side-menu" . -}}
       </div>
-      <div class="col-sm-9">
+      <div class="{{ if $fluid }}col-xl-10 col-lg-9 col-sm-8{{ else }}col-lg-9 col-md-8{{ end }}">
         {{- partial "tags.html" . -}}
         {{ .Content }}
         {{ if $autoindex }}
@@ -19,4 +22,3 @@
     </div>
   </div>
 {{ end }}
-

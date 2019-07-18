@@ -1,0 +1,5 @@
+{{- partial "search-banner.html" . -}}
+{{- partial "landing-cards.html" . -}}
+<div class="container{{ if .Site.Params.fluid }}-fluid{{ end }}">
+  {{ .Content }}
+</div>

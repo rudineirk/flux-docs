@@ -5,7 +5,7 @@
 {{ $pages := ($.Scratch.Get "pages") }}
 {{ $indexTitle := cond (isset .Params "indextitle") .Page.Params.indextitle (T "indexTitle") }}
 {{ if $indexTitle }}<h3>{{ $indexTitle }}</h3>{{ end }}
-<ul class="nav flex-column">
+<ul class="nav flex-column section-pages-index">
   {{ range $idx, $page := $pages.ByWeight }}
     <li class="nav-item page-index-link">
       <a class="nav-link" href="{{ $page.RelPermalink }}">{{.Title}}</a>

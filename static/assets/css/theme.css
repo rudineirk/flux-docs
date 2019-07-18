@@ -140,13 +140,19 @@ pre.chroma {
   border-radius: 2px;
   background-color: #fdf6e3;
   border: 1px solid #fbf0cb;
-  padding: 0px 2px;
+  padding: 5px 10px;
   color: #5e5e5e;
 }
 
 .page-content {
   margin-top: 32px;
   margin-bottom: 32px;
+}
+
+@media (min-width:1600px) {
+  .page-content-fluid {
+    padding-right: 100px;
+  }
 }
 
 .task-list li {
@@ -256,6 +262,13 @@ pre.chroma {
     margin-left: -280px;
     height: 0;
     width: 270px;
+  }
+
+  .page-toc.page-toc-fluid {
+    position: relative;
+    top: unset;
+    margin-left: 0;
+    height: max-content;
   }
 }
 
@@ -448,6 +461,35 @@ pre.chroma {
 .sidebar-link .fx-icon {
   width: 32px;
   font-size: 32px;
+}
+
+.sidebar-submenu li {
+  padding-left: 30px;
+}
+
+.sidebar-submenu .sidebar-link a {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 5px 10px;
+}
+
+.sidebar-submenu .sidebar-link .fx-icon {
+  width: 24px;
+  font-size: 24px;
+}
+/* ---------------- */
+
+/* section */
+.section-pages-index {
+  width: max-content;
+}
+
+.section-pages-index li {
+  width: auto;
+}
+
+.section-pages-index li a {
+  width: max-content;
 }
 /* ---------------- */
 

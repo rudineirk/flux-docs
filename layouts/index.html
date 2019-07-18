@@ -6,11 +6,18 @@
   </head>
   <body>
     {{- partial "header.html" . -}}
-    {{- partial "search-banner.html" . -}}
-    {{- partial "landing-cards.html" . -}}
-    <div class="container">
-      {{ .Content }}
-    </div>
+    {{ $layout := cond (default false .Site.Params.fluid) (default "section" .Page.Params.layout) (default "home" .Page.Params.layout) }}
+
+    {{ if eq $layout "page" }}
+      {{- partial "breadcrumbs.html" . -}}
+      {{- partial "layout-page.html" . -}}
+    {{ else if eq $layout "section" }}
+      {{- partial "breadcrumbs.html" . -}}
+      {{- partial "layout-section.html" . -}}
+    {{ else }}
+      {{- partial "layout-home.html" . -}}
+    {{ end }}
+
     {{- partial "footer.html" . -}}
     {{- partial "scripts.html" . -}}
   </body>
