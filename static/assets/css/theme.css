@@ -132,7 +132,7 @@ code {
 
 pre code {
   border: none;
-  padding: none;
+  padding: 0;
 }
 
 pre,
