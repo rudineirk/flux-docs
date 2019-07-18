@@ -26,13 +26,13 @@
 
     {{ if (gt (len $pages) 0) }}
       <h3>{{ cond (not $parent.Params.indexTitle) (T "indexTitle") $parent.Params.indexTitle }}</h3>
-      <ul class="nav flex-column">
-        {{ range $idx, $page := $pages.ByWeight }}
-          <li class="nav-item page-index-link">
-            <a class="nav-link" href="{{ $page.RelPermalink }}">{{.Title}}</a>
+      <ol class="nav flex-column page-side-menu-items">
+        {{ range $idx, $item := $pages.ByWeight }}
+          <li class="nav-item page-index-link{{ if (eq $page.RelPermalink $item.RelPermalink) }} current{{ end }}">
+            <a class="nav-link" href="{{ $item.RelPermalink }}">{{ $item.Title }}</a>
           </li>
         {{ end }}
-      </ul>
+      </ol>
     {{ end }}
   {{ end }}
 </aside>

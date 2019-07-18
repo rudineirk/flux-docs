@@ -579,6 +579,29 @@ pre.chroma {
 .page-footer .btn.btn-disabled:hover {
   background-color: transparent;
 }
+
+.page-side-menu-items li {
+  counter-increment: ordered-list;
+}
+
+.page-side-menu-items li a::before {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  content: counter(ordered-list);
+  margin-right: 10px;
+  background-color: #c9c9c9;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.page-side-menu-items li.current a::before {
+  background-color: #385A7B;
+}
 /* ---------------- */
 
 /* roadmap */
