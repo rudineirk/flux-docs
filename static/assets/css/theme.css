@@ -124,24 +124,25 @@ blockquote p {
 }
 
 code {
-  background-color: #fdf6e3;
-  border: 1px solid #fbf0cb;
+  border: 1px solid #585858;
   padding: 1px 3px;
-  color: #5e5e5e;
+  color: #f8f8f2;
+  background-color: #272822;
 }
 
 pre code {
   border: none;
   padding: 0;
+  font-size: 14px;
 }
 
 pre,
 pre.chroma {
   border-radius: 2px;
-  background-color: #fdf6e3;
-  border: 1px solid #fbf0cb;
+  color: #f8f8f2;
+  background-color: #272822;
+  border: 1px solid #585858;
   padding: 5px 10px;
-  color: #5e5e5e;
 }
 
 .page-content {
