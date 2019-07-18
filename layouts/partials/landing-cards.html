@@ -4,7 +4,7 @@
   {{ range $idx, $page := .Sections.ByWeight }}
     <div class="col-md-3 col-sm-4 fx-card">
       <a href="{{ $page.RelPermalink }}">
-        {{- partial "icon.html" (dict "icon" $page.Params.icon "color" (default .Site.Params.pageIconColor $page.Params.iconColor)) -}}
+        {{- partial "icon.html" (dict "icon" $page.Params.icon "color" (default .Site.Params.pageIconColor $page.Params.iconColor) "brand" (default false $page.Params.iconbrand)) -}}
         <h4>{{ $page.Title }}</h4>
         <p>{{ $page.Params.description }}</p>
       </a>
