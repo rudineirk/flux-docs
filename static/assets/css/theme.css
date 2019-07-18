@@ -123,6 +123,18 @@ blockquote p {
   margin: 1rem 0;
 }
 
+code {
+  background-color: #fdf6e3;
+  border: 1px solid #fbf0cb;
+  padding: 1px 3px;
+  color: #5e5e5e;
+}
+
+pre code {
+  border: none;
+  padding: none;
+}
+
 pre,
 pre.chroma {
   border-radius: 2px;
