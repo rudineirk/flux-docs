@@ -2,6 +2,9 @@
 <aside>
   {{ with .Parent }}
     {{ $parent := cond .Page.IsHome $page .Page }}
+    {{ $pages := cond (ne $parent.Sections nil) ($parent.Pages | union $parent.Sections) $parent.Pages }}
+    {{ $sections := $parent.Parent.Sections }}
+
     <div class="dropdown page-sections-select">
       <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
         {{- partial "icon.html" (dict "icon" $parent.Params.icon "color" (default .Site.Params.pageIconColor $parent.Params.iconColor) "brand" (default false $parent.Params.iconbrand)) -}}
@@ -13,7 +16,7 @@
         <i class="fas fa-chevron-down select-icon"></i>
       </button>
       <div class="dropdown-menu dropdown-menu-right">
-        {{ range .Site.Sections }}
+        {{ range $sections }}
           <a href="{{ .RelPermalink }}" class="dropdown-item{{ if (eq $parent.RelPermalink .RelPermalink) }} active{{ end }}">
             <span class="pl-2">{{ .Title }}</span>
           </a>
@@ -21,11 +24,6 @@
       </div>
     </div>
 
-    {{ $.Scratch.Set "pages" $parent.Pages }}
-    {{ if .Sections}}
-      {{ $.Scratch.Set "pages" ($parent.Pages | union $parent.Sections) }}
-    {{end}}
-    {{ $pages := ($.Scratch.Get "pages") }}
     {{ if (gt (len $pages) 0) }}
       <h3>{{ cond (not $parent.Params.indexTitle) (T "indexTitle") $parent.Params.indexTitle }}</h3>
       <ul class="nav flex-column">
