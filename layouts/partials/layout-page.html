@@ -8,14 +8,14 @@
         {{- partial "page-footer.html" . -}}
       </div>
     {{ else }}
-      <div class="col-md-4">
-        {{- partial "page-side-menu" . -}}
-      </div>
-      <div class="col-md-8 order-md-first">
+      <div class="col-md-8">
         {{- partial "tags.html" . -}}
         {{- partial "toc.html" . -}}
         {{ .Content }}
         {{- partial "page-footer.html" . -}}
+      </div>
+      <div class="col-md-4">
+        {{- partial "page-side-menu" . -}}
       </div>
     {{ end }}
     {{- partial "back-to-top.html" . -}}
