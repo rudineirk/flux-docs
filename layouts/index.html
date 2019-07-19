@@ -16,9 +16,11 @@
           {{- partial "footer.html" . -}}
         </div>
       {{ else if eq $layout "section" }}
-        {{- partial "breadcrumbs.html" . -}}
-        {{- partial "layout-section.html" . -}}
-        {{- partial "footer.html" . -}}
+        <div class="content-wrapper">
+          {{- partial "breadcrumbs.html" . -}}
+          {{- partial "layout-section.html" . -}}
+          {{- partial "footer.html" . -}}
+        </div>
       {{ else }}
         {{- partial "layout-home.html" . -}}
         {{- partial "footer.html" . -}}

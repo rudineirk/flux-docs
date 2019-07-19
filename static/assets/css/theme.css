@@ -324,8 +324,13 @@ pre.chroma {
 /* ---------------- */
 
 /* header */
+.header-logo {
+  display: inline-block;
+  padding: 2px 2px;
+}
+
 .header-logo img {
-  height: 56px;
+  height: 52px;
 }
 
 .header-logo-text {
@@ -334,17 +339,13 @@ pre.chroma {
   padding-bottom: 16px;
 }
 
-.header-links {
-  margin-bottom: 2px;
-}
-
 .header-link {
   display: inline-block;
+  border-bottom: 2px solid rgba(0,0,0,0);
 }
 
 .header-link:hover {
   border-bottom: 2px solid black;
-  margin-bottom: -3px;
 }
 /* ---------------- */
 

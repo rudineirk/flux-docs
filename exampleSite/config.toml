@@ -44,10 +44,10 @@ weight = 2
 languageCode = "pt-BR"
 languageName = "Português"
 
-  [[Languages.pt.headerLinks]]
+  [[Languages.pt.params.headerLinks]]
   link = "/pt/tags/"
   title = "Tags"
 
-  [[Languages.pt.headerLinks]]
+  [[Languages.pt.params.headerLinks]]
   link = "https://github.com/rudineirk/hugo-theme-flex-docs/"
   title = "Github"
