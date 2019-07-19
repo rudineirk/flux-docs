@@ -339,6 +339,10 @@ pre.chroma {
   padding-bottom: 16px;
 }
 
+.header-links {
+  margin-bottom: -1px;
+}
+
 .header-link {
   display: inline-block;
   border-bottom: 2px solid rgba(0,0,0,0);
