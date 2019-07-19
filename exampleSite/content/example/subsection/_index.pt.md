@@ -1,8 +1,8 @@
 ---
-title: "Page"
+title: "Sub-seção"
 weight: 5
 fluid: true
 fullmenu: true
 ---
 
-Normal page
+Exemplo de sub-seção

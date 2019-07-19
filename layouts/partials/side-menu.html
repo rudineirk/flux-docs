@@ -1,6 +1,7 @@
 {{ $current := . }}
+{{ $fullmenu := (default (default false .Site.Params.fullmenu) .Page.Params.fullmenu) }}
 
-{{ if (default false .Site.Params.fullmenu) }}
+{{ if $fullmenu }}
   <ul class="nav flex-column">
     {{ $pages := .Site.Sections }}
     {{ range $idx, $page := $pages }}
@@ -42,6 +43,9 @@
           {{ $subpage.Title }}
         </a>
       </li>
+      {{ if (hasPrefix $current.RelPermalink $subpage.RelPermalink) }}
+        {{ template "submenu" (dict "page" $subpage "current" $current) }}
+      {{ end }}
     {{ end }}
   </ul>
 {{ end }}

@@ -1,5 +1,7 @@
+{{ $fluid := (default (default false .Site.Params.fluid) .Page.Params.fluid) }}
+
 <footer class="footer text-muted border-top">
-  <div class="container{{ if .Site.Params.fluid }}-fluid{{ end }}">
+  <div class="container{{ if $fluid }}-fluid{{ end }}">
     <div class="row">
       <div class="col-md-9 col-xs-12">
         <p>Copyright © {{ .Site.Params.author }}</p>

@@ -1,5 +1,5 @@
-{{ $fluid := (default false .Site.Params.fluid) }}
-{{ $fullmenu := (default false .Site.Params.fullmenu) }}
+{{ $fluid := (default (default false .Site.Params.fluid) .Page.Params.fluid) }}
+{{ $fullmenu := (default (default false .Site.Params.fullmenu) .Page.Params.fullmenu) }}
 
 {{ if eq .Kind "taxonomy" }}
   {{- partial "tags-index.html" . -}}

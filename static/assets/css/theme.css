@@ -441,7 +441,7 @@ pre.chroma {
   border-left: 4px solid #2687E9;
 }
 
-.sidebar-link a {
+.sidebar-link > a {
   font-size: 16px;
   line-height: 24px;
   padding: 10px 15px;
@@ -449,7 +449,7 @@ pre.chroma {
   transition: .2s all ease;
 }
 
-.sidebar-link.active a {
+.sidebar-link.active > a {
   color: #2687E9;
   font-weight: 600;
 }
@@ -472,6 +472,10 @@ pre.chroma {
   font-size: 14px;
   line-height: 16px;
   padding: 5px 10px;
+}
+
+.sidebar-submenu .sidebar-submenu .sidebar-link {
+  padding-left: 60px;
 }
 
 .sidebar-submenu .sidebar-link .fx-icon {

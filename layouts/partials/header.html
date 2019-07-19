@@ -1,7 +1,9 @@
+{{ $fluid := (default (default false .Site.Params.fluid) .Page.Params.fluid) }}
+
 {{ $data := cond (eq .Site.IsMultiLingual true) (index .Site.Data .Site.Language.Lang) .Site.Data }}
 <a name="page-top"></a>
 <div class="bg-white border-bottom box-shadow">
-  <div class="container{{ if .Site.Params.fluid }}-fluid{{ end }}">
+  <div class="container{{ if $fluid }}-fluid{{ end }}">
     <div class="row">
       <div class="col-sm-4 col-xs-12">
         <a class="header-logo {{ if not .Site.Params.logoImage }}header-logo-text{{ end }}" href="{{ "/" | relLangURL }}">
@@ -14,7 +16,7 @@
       </div>
       <div class="col-sm-8 col-xs-12 header-links">
         <nav class="float-right">
-          <div class="container{{ if .Site.Params.fluid }}-fluid{{ end }}">
+          <div class="container{{ if $fluid }}-fluid{{ end }}">
             <div class="row">
               {{ range $idx, $link := $data.header.links }}
                 {{ $linkURL := cond (or (hasPrefix $link.link "http") (hasPrefix $link.link "//")) $link.link (relURL $link.link) }}

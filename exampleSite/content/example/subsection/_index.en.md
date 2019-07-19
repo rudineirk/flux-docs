@@ -1,8 +1,8 @@
 ---
-title: "Page"
+title: "Sub-section"
 weight: 5
 fluid: true
 fullmenu: true
 ---
 
-Normal page
+Example sub-section

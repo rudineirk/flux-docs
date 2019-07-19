@@ -1,7 +1,9 @@
+{{ $fluid := (default (default false .Site.Params.fluid) .Page.Params.fluid) }}
+
 {{ $baseUrl := "/" }}
 {{ $breadcrumbUrl := "" }}
 <nav role="navigation" class="border-bottom box-shadow breadcrumb-bg breadcrumb-nav">
-  <div class="container{{ if .Site.Params.fluid }}-fluid{{ end }}">
+  <div class="container{{ if $fluid }}-fluid{{ end }}">
     <div class="row">
       <div class="col-sm-12 col-md-8 col-lg-9">
         <ol class="breadcrumb breadcrumb-bg">

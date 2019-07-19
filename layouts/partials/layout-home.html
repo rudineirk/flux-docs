@@ -1,5 +1,6 @@
+{{ $fluid := (default (default false .Site.Params.fluid) .Page.Params.fluid) }}
 {{- partial "search-banner.html" . -}}
 {{- partial "landing-cards.html" . -}}
-<div class="container{{ if .Site.Params.fluid }}-fluid{{ end }}">
+<div class="container{{ if $fluid }}-fluid{{ end }}">
   {{ .Content }}
 </div>
