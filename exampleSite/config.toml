@@ -35,7 +35,7 @@ languageName = "English"
   title = "Tags"
 
   [[Languages.en.params.headerLinks]]
-  link = "https://github.com/rudineirk/hugo-theme-flex-docs/"
+  link = "https://github.com/rudineirk/flux-docs/"
   title = "Github"
 
 [Languages.pt]
@@ -49,5 +49,5 @@ languageName = "Português"
   title = "Tags"
 
   [[Languages.pt.params.headerLinks]]
-  link = "https://github.com/rudineirk/hugo-theme-flex-docs/"
+  link = "https://github.com/rudineirk/flux-docs/"
   title = "Github"
