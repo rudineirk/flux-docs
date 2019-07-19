@@ -30,11 +30,11 @@ weight = 1
 languageCode = "en-US"
 languageName = "English"
 
-  [[Languages.en.headerLinks]]
+  [[Languages.en.params.headerLinks]]
   link = "/en/tags/"
   title = "Tags"
 
-  [[Languages.en.headerLinks]]
+  [[Languages.en.params.headerLinks]]
   link = "https://github.com/rudineirk/hugo-theme-flex-docs/"
   title = "Github"
 
