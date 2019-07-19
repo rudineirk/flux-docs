@@ -5,12 +5,12 @@
 <nav role="navigation" class="breadcrumb-bg breadcrumb-nav">
   <div class="container{{ if $fluid }}-fluid{{ end }}">
     <div class="row">
-      <div class="col-sm-12 col-md-8 col-lg-9">
+      <div class="col-sm-12 col-md-8">
         <ol class="breadcrumb breadcrumb-bg">
           {{ template "breadcrumb" dict "page" . "value" (printf "<li class='breadcrumb-item'>%s</li>" .Title) }}
         </ol>
       </div>
-      <div class="col-sm-12 col-md-4 col-lg-3">
+      <div class="col-sm-12 col-md-4">
         {{- partial "search-input.html" (dict "placeholder" (T "searchPlaceholder")) -}}
       </div>
     </div>
