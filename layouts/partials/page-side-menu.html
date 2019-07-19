@@ -1,3 +1,8 @@
+{{ $isSection := (eq (default .Kind .Page.Params.layout) "section") }}
+{{ $sectionFullmenu := (and $isSection (default false .Site.Params.sectionFullmenu)) }}
+{{ $fullmenu := (default (default false .Site.Params.fullmenu) .Page.Params.fullmenu) }}
+{{ $fullmenu = (or $fullmenu $sectionFullmenu) }}
+
 {{ $page := .Page }}
 <aside>
   {{ with .Parent }}
@@ -25,14 +30,16 @@
     </div>
 
     {{ if (gt (len $pages) 0) }}
-      <h3>{{ cond (not $parent.Params.indexTitle) (T "indexTitle") $parent.Params.indexTitle }}</h3>
-      <ol class="nav flex-column page-side-menu-items">
-        {{ range $idx, $item := $pages.ByWeight }}
-          <li class="nav-item page-index-link{{ if (eq $page.RelPermalink $item.RelPermalink) }} current{{ end }}">
-            <a class="nav-link" href="{{ $item.RelPermalink }}">{{ $item.Title }}</a>
-          </li>
-        {{ end }}
-      </ol>
+      {{ if not $fullmenu }}<div class="content-box page-side-menu">{{ end }}
+        <h3>{{ cond (not $parent.Params.indexTitle) (T "indexTitle") $parent.Params.indexTitle }}</h3>
+        <ol class="nav flex-column page-side-menu-items">
+          {{ range $idx, $item := $pages.ByWeight }}
+            <li class="nav-item page-index-link{{ if (eq $page.RelPermalink $item.RelPermalink) }} current{{ end }}">
+              <a class="nav-link" href="{{ $item.RelPermalink }}">{{ $item.Title }}</a>
+            </li>
+          {{ end }}
+        </ol>
+      {{ if not $fullmenu }}</div>{{ end }}
     {{ end }}
   {{ end }}
 </aside>

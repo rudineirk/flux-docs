@@ -1,5 +1,8 @@
 {{ $current := . }}
+{{ $isSection := (eq (default .Kind .Page.Params.layout) "section") }}
+{{ $sectionFullmenu := (and $isSection (default false .Site.Params.sectionFullmenu)) }}
 {{ $fullmenu := (default (default false .Site.Params.fullmenu) .Page.Params.fullmenu) }}
+{{ $fullmenu = (or $fullmenu $sectionFullmenu) }}
 
 {{ if $fullmenu }}
   <ul class="nav flex-column">

@@ -1,8 +1,14 @@
 {{ define "main" }}
-{{- partial "breadcrumbs.html" . -}}
-{{ if eq .Page.Params.layout "page" }}
-  {{- partial "layout-page.html" . -}}
-{{ else }}
-  {{- partial "layout-section.html" . -}}
-{{ end }}
+  {{ $fullmenu := (default (default false .Site.Params.fullmenu) .Page.Params.fullmenu) }}
+  <div class="content-wrapper">
+    {{ if eq .Page.Params.layout "page" }}
+      {{- partial "breadcrumbs.html" . -}}
+      {{- partial "layout-page.html" . -}}
+      {{- partial "footer.html" . -}}
+    {{ else }}
+      {{- partial "breadcrumbs.html" . -}}
+      {{- partial "layout-section.html" . -}}
+      {{- partial "footer.html" . -}}
+    {{ end }}
+  </div>
 {{ end }}

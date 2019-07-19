@@ -1,5 +1,5 @@
 ---
-title: "Sub-página"
+title: "Seção como página"
 weight: 1
 layout: page
 fluid: true

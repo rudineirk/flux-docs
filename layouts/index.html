@@ -5,20 +5,26 @@
     {{- partial "style.html" . -}}
   </head>
   <body>
-    {{- partial "header.html" . -}}
-    {{ $layout := cond (default false .Site.Params.fluid) (default "section" .Page.Params.layout) (default "home" .Page.Params.layout) }}
+    <div class="page">
+      {{- partial "header.html" . -}}
+      {{ $layout := cond (default false .Site.Params.fluid) (default "section" .Page.Params.layout) (default "home" .Page.Params.layout) }}
 
-    {{ if eq $layout "page" }}
-      {{- partial "breadcrumbs.html" . -}}
-      {{- partial "layout-page.html" . -}}
-    {{ else if eq $layout "section" }}
-      {{- partial "breadcrumbs.html" . -}}
-      {{- partial "layout-section.html" . -}}
-    {{ else }}
-      {{- partial "layout-home.html" . -}}
-    {{ end }}
+      {{ if eq $layout "page" }}
+        <div class="content-wrapper">
+          {{- partial "breadcrumbs.html" . -}}
+          {{- partial "layout-page.html" . -}}
+          {{- partial "footer.html" . -}}
+        </div>
+      {{ else if eq $layout "section" }}
+        {{- partial "breadcrumbs.html" . -}}
+        {{- partial "layout-section.html" . -}}
+        {{- partial "footer.html" . -}}
+      {{ else }}
+        {{- partial "layout-home.html" . -}}
+        {{- partial "footer.html" . -}}
+      {{ end }}
 
-    {{- partial "footer.html" . -}}
-    {{- partial "scripts.html" . -}}
+      {{- partial "scripts.html" . -}}
+    </div>
   </body>
 </html>

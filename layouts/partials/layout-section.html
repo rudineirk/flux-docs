@@ -12,7 +12,7 @@
       <div class="{{ if $fluid }}col-xl-2 col-lg-3 col-sm-4{{ else }}col-lg-3 col-md-4{{ end }}">
         {{- partial "side-menu" . -}}
       </div>
-      <div class="{{ if $fluid }}col-xl-10 col-lg-9 col-sm-8{{ else }}col-lg-9 col-md-8{{ end }}">
+      <div class="content-box {{ if $fluid }}col-xl-10 col-lg-9 col-sm-8{{ else }}col-lg-9 col-md-8{{ end }}">
         {{- partial "tags.html" . -}}
         {{ .Content }}
         {{ if $autoindex }}
