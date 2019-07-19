@@ -133,14 +133,15 @@ blockquote p {
 }
 
 code {
-  border: 1px solid #585858;
   padding: 1px 3px;
-  color: #f8f8f2;
-  background-color: #272822;
+  color: #2e2e2e;
+  background: #FFF7DD;
+  border: 1px solid #fbf0cb;
 }
 
 pre code {
   border: none;
+  background-color: #272822;
   padding: 0;
   font-size: 14px;
 }
