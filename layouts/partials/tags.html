@@ -1,5 +1,5 @@
 {{ if (.Params.tags | default false) }}
-<div class="page-tags">
+<div class="page-tags d-print-none">
   {{range .Params.tags}}
     <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/" class="badge badge-pill">{{ . }}</a>
   {{end}}
