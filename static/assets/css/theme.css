@@ -171,6 +171,10 @@ pre.chroma {
   padding-bottom: 32px;
 }
 
+.page-center-title h1:first-of-type {
+  text-align: center;
+}
+
 @media (min-width:1600px) {
   .page-fluid {
     padding-right: 100px;
