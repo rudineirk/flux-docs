@@ -3,10 +3,10 @@
 <footer class="footer text-muted">
   <div class="container{{ if $fluid }}-fluid{{ end }}">
     <div class="row">
-      <div class="col-md-9 col-xs-12">
+      <div class="footer-copyright col-md-9 col-xs-12">
         <p>Copyright © {{ .Site.Params.author }}</p>
       </div>
-      <div class="col-md-3 col-xs-12 text-md-right text-xs-center">
+      <div class="col-md-3 col-xs-12 text-md-right text-xs-center d-print-none">
         {{- partial "lang-selector" . -}}
       </div>
     </div>

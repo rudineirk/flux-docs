@@ -7,7 +7,7 @@
   <body>
     {{ $isPage := (or (eq (default "" .Kind) "page") (eq (default "" .Page.Params.layout) "page")) }}
     {{ $isSection := (or (eq (default "" .Kind) "section") (eq (default "" .Page.Params.layout) "section")) }}
-    <div class="page {{ if (or $isPage $isSection) }}page-bg{{ end }}">
+    <div class="flux-docs {{ if (or $isPage $isSection) }}page-bg{{ end }}">
       {{- partial "header.html" . -}}
       {{ block "main" . }}
       {{ end }}

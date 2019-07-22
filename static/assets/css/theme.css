@@ -3,7 +3,7 @@ body {
   min-height: 100vh;
 }
 
-.page {
+.flux-docs {
   min-height: 100vh;
 }
 
@@ -166,14 +166,43 @@ pre.chroma {
   margin-bottom: 15px;
 }
 
-.page-content {
+.page {
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
 @media (min-width:1600px) {
-  .page-content-fluid {
+  .page-fluid {
     padding-right: 100px;
+  }
+}
+
+@media print {
+  .page-bg {
+    background-color: #fff;
+  }
+
+  .page-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .footer-copyright {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .content-wrapper {
+    background-color: #fff;
+  }
+
+  .content-box {
+    border: none;
+  }
+
+  blockquote {
+    border: none;
+    border-left: 5px solid #F0F2F4;
   }
 }
 

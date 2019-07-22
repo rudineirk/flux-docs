@@ -5,7 +5,7 @@
     {{- partial "style.html" . -}}
   </head>
   <body>
-    <div class="page">
+    <div class="flux-docs">
       {{- partial "header.html" . -}}
       {{ $layout := cond (default false .Site.Params.fluid) (default "section" .Page.Params.layout) (default "home" .Page.Params.layout) }}
 

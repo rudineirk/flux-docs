@@ -14,7 +14,7 @@
     {{ end }}
 
     {{ if (or $prevPage $nextPage) }}
-      <div class="container{{ if $fluid }}-fluid{{ end }} page-footer">
+      <div class="container{{ if $fluid }}-fluid{{ end }} page-footer d-print-none">
         <div class="row">
           <div class="col-6 nav-btn-container">
               {{ with $prevPage }}

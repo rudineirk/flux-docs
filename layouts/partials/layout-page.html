@@ -1,10 +1,10 @@
 {{ $fluid := (default (default false .Site.Params.fluid) .Page.Params.fluid) }}
 {{ $fullmenu := (default (default false .Site.Params.fullmenu) .Page.Params.fullmenu) }}
 
-<div class="container{{ if $fluid }}-fluid{{ end }} page-content {{ if $fluid }}page-content-fluid{{ end }}">
+<div class="container{{ if $fluid }}-fluid{{ end }} page {{ if $fluid }}page-fluid{{ end }}">
   <div class="row">
     {{ if .Params.hideSideMenu }}
-      <div class="col-sm-12 content-box">
+      <div class="page-content col-sm-12 content-box">
         {{- partial "tags.html" . -}}
         {{- partial "toc.html" . -}}
         {{ .Content }}
@@ -18,7 +18,7 @@
           {{- partial "page-side-menu" . -}}
         {{ end }}
       </div>
-      <div class="content-box {{ if $fluid }}col-xl-10 col-lg-9 col-sm-8{{ else }}col-md-8{{ end }}">
+      <div class="page-content content-box {{ if $fluid }}col-xl-10 col-lg-9 col-sm-8{{ else }}col-md-8{{ end }}">
         {{- partial "tags.html" . -}}
         {{- partial "toc.html" . -}}
         {{ .Content }}

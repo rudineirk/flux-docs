@@ -5,7 +5,7 @@
 {{ $fullmenu = (or $fullmenu $sectionFullmenu) }}
 
 {{ if $fullmenu }}
-  <ul class="nav flex-column">
+  <ul class="nav flex-column d-print-none">
     {{ $pages := .Site.Sections }}
     {{ range $idx, $page := $pages }}
       {{ template "menu-item" (dict "page" $page "current" $current) }}
@@ -15,7 +15,7 @@
     {{ end }}
   </ul>
 {{ else }}
-  <ul class="nav flex-column">
+  <ul class="nav flex-column d-print-none">
     {{ $parent := cond .IsHome $current $current.Parent }}
     {{ with $parent }}
       {{ $pages := cond $parent.IsHome $parent.Sections ($parent.Pages | union $parent.Sections) }}

@@ -4,7 +4,7 @@
 {{ $fullmenu = (or $fullmenu $sectionFullmenu) }}
 
 {{ $page := .Page }}
-<aside>
+<aside class="d-print-none">
   {{ with .Parent }}
     {{ $parent := cond .Page.IsHome $page .Page }}
     {{ $pages := cond (ne $parent.Sections nil) ($parent.Pages | union $parent.Sections) $parent.Pages }}
