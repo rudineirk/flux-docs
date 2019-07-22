@@ -204,6 +204,12 @@ pre.chroma {
     border: none;
     border-left: 5px solid #F0F2F4;
   }
+
+  /* bootstrap bug #26781 fix */
+  .row {
+    display: block !important;
+  }
+  /* ------------------------ */
 }
 
 .task-list li {
