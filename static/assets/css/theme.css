@@ -121,6 +121,14 @@ hr {
   display: none;
 }
 
+.task-list li {
+  list-style: none;
+}
+
+.task-list li > label {
+  margin-bottom: 0;
+}
+
 blockquote {
   border-left: 5px solid #F0F2F4;
   margin: 1.5rem 0;
@@ -153,6 +161,24 @@ pre.chroma {
   background-color: #272822;
   border: 1px solid #585858;
   padding: 5px 10px;
+}
+
+.back-to-top {
+  color: #767676 !important;
+  position: fixed;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  background-color: #F8FAFC;
+  box-shadow: 0 1px 5px rgba(0,0,0,.4);
+  border-radius: 30px;
+
+  bottom: 2em;
+  right: 2em;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 8px;
 }
 
 .content-wrapper {
@@ -227,20 +253,15 @@ pre.chroma {
   /* ------------------------ */
 }
 
-.task-list li {
-  list-style: none;
-}
-
-.task-list li > label {
-  margin-bottom: 0;
-}
-
+/* icons */
 .fx-icon {
   width: 32px;
   font-size: 32px;
   vertical-align: text-bottom;
 }
+/* ---------------- */
 
+/* cards */
 .fx-cards {
   margin-bottom: 32px;
 }
@@ -282,24 +303,7 @@ pre.chroma {
   width: 54px;
   font-size: 54px;
 }
-
-.back-to-top {
-  color: #767676 !important;
-  position: fixed;
-  display: inline-block;
-  width: 42px;
-  height: 42px;
-  background-color: #F8FAFC;
-  box-shadow: 0 1px 5px rgba(0,0,0,.4);
-  border-radius: 30px;
-
-  bottom: 2em;
-  right: 2em;
-  margin-bottom: 0;
-  text-align: center;
-  vertical-align: middle;
-  padding-top: 8px;
-}
+/* ---------------- */
 
 /* toc */
 .page-toc a {
