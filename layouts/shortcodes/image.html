@@ -2,11 +2,14 @@
 {{ $alt := default "" (.Get "alt") }}
 {{ $width := default "" (.Get "width") }}
 {{ $height := default "" (.Get "height") }}
+{{ $align := default "" (.Get "align") }}
+{{ $alignClass := cond (ne $align "") (cond (eq $align "left") "mr-auto d-block" (cond (eq $align "right") "ml-auto d-block" "mx-auto d-block")) "" }}
 
 {{ $params := "" }}
 {{ $params = cond (ne $alt "") (printf "%s%s%s%s" $params " alt=\"" $alt "\"") $params }}
 {{ $params = cond (ne $height "") (printf "%s%s%s%s" $params " height=\"" $height "\"") $params }}
 {{ $params = cond (ne $width "") (printf "%s%s%s%s" $params " width=\"" $width "\"") $params }}
+{{ $params = cond (ne $align "") (printf "%s%s%s%s" $params " class=\"" $alignClass "\"") $params }}
 {{ $imageTag := printf "<img src='%s' %s />" (relURL $url) $params }}
 
 {{ $imageTag | safeHTML }}

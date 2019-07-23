@@ -4,6 +4,8 @@
 {{ $controls := default "false" (.Get "controls") }}
 {{ $muted := default "true" (.Get "muted") }}
 {{ $autoplay := default "true" (.Get "autoplay") }}
+{{ $align := default "" (.Get "align") }}
+{{ $alignClass := cond (ne $align "") (cond (eq $align "left") "mr-auto d-block" (cond (eq $align "right") "ml-auto d-block" "mx-auto d-block")) "" }}
 
 {{ $params := "" }}
 {{ $params = cond (ne $height "") (printf "%s%s%s%s" $params " height=\"" $height "\"") $params }}
@@ -11,6 +13,7 @@
 {{ $params = cond (eq $controls "true") (printf "%s%s" $params " controls") $params }}
 {{ $params = cond (eq $muted "true") (printf "%s%s" $params " muted") $params }}
 {{ $params = cond (eq $autoplay "true") (printf "%s%s" $params " autoplay loop") $params }}
+{{ $params = cond (ne $align "") (printf "%s%s%s%s" $params " class=\"" $alignClass "\"") $params }}
 {{ $videoTag := printf "<video playsinline %s>" $params }}
 
 {{ $videoTag | safeHTML }}
