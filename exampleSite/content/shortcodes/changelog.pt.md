@@ -17,7 +17,7 @@ hideSideMenu: true
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut turpis quis diam luctus venenatis. Integer consectetur tortor non varius posuere. Vivamus vel felis nunc. Mauris nec hendrerit sem, ullamcorper ullamcorper eros. Morbi feugiat, neque non pellentesque consequat, tortor nulla sagittis orci, id consectetur diam risus et quam. Pellentesque tincidunt purus in nisl egestas, porta feugiat libero mollis. Integer maximus libero ligula, id dignissim dolor cursus sit amet. Ut consequat id erat ac ultrices.
 {{% /changelog-text %}}
 
-{{% changelog-video url="/video/keyboard-cat" %}}
+{{% changelog-video url="/flux-docs/video/keyboard-cat" %}}
 {{% /changelog-row %}}
 
 {{% changelog-row image-left="true" %}}
@@ -27,7 +27,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut turpis q
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut turpis quis diam luctus venenatis. Integer consectetur tortor non varius posuere. Vivamus vel felis nunc. Mauris nec hendrerit sem, ullamcorper ullamcorper eros. Morbi feugiat, neque non pellentesque consequat, tortor nulla sagittis orci, id consectetur diam risus et quam. Pellentesque tincidunt purus in nisl egestas, porta feugiat libero mollis. Integer maximus libero ligula, id dignissim dolor cursus sit amet. Ut consequat id erat ac ultrices.
 {{% /changelog-text %}}
 
-{{% changelog-image url="/img/theme.png" %}}
+{{% changelog-image url="/flux-docs/img/theme.png" %}}
 {{% /changelog-row %}}
 
 ## Usage

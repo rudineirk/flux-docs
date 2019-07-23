@@ -11,11 +11,11 @@ tags:
 
 Video
 
-{{% video url="/video/keyboard-cat" width="480" height="348" align="center" %}}
+{{% video url="/flux-docs/video/keyboard-cat" width="480" height="348" align="center" %}}
 
 Imagem
 
-{{% image url="/img/theme.png" width="480" align="center" %}}
+{{% image url="/flux-docs/img/theme.png" width="480" align="center" %}}
 
 ## Uso
 

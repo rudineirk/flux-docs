@@ -12,7 +12,7 @@ tags:
 {{< icon icon="fa-tasks" >}} tasks  
 {{< icon icon="fa-pen-square" color="red" >}} pen-square  
 {{< icon icon="fa-instagram" brand="true" >}} instagram  
-{{< icon icon="/img/icon.svg" >}} logo  
+{{< icon icon="/flux-docs/img/icon.svg" >}} logo  
 
 ## Usage
 
@@ -23,7 +23,7 @@ tags:
 {{</* icon icon="fa-instagram" brand="true" */>}}
 
 # With images:
-{{</* icon icon="/img/icon.svg" */>}}
+{{</* icon icon="/flux-docs/img/icon.svg" */>}}
 ```
 
 [Fontawesome](https://fontawesome.com/icons)

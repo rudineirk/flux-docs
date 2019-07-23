@@ -9,7 +9,7 @@
 {{ if hasPrefix $icon "fa-" }}
 <i class="fx-icon {{ if (eq $brand "true") }}fab{{ else }}fas{{ end }} {{ $icon }}" style="{{ if ne $color "" }}color: {{ $color }};{{ end }}{{ if ne $size "" }}font-size: {{ $size }}; width: {{ $size }}{{ end }}"></i>
 {{ else }}
-<img class="fx-icon" src="{{ $icon | relURL }}" style="{{ if ne $size "" }}width: {{ $size }}{{ end }}">
+<img class="fx-icon" src="{{ $icon }}" style="{{ if ne $size "" }}width: {{ $size }}{{ end }}">
 {{ end }}
 
 {{ if ne $tooltip "" }}</span>{{ end }}

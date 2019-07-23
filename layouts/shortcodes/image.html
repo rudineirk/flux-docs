@@ -10,6 +10,6 @@
 {{ $params = cond (ne $height "") (printf "%s%s%s%s" $params " height=\"" $height "\"") $params }}
 {{ $params = cond (ne $width "") (printf "%s%s%s%s" $params " width=\"" $width "\"") $params }}
 {{ $params = cond (ne $align "") (printf "%s%s%s%s" $params " class=\"" $alignClass "\"") $params }}
-{{ $imageTag := printf "<img src='%s' %s />" (relURL $url) $params }}
+{{ $imageTag := printf "<img src='%s' %s />" $url $params }}
 
 {{ $imageTag | safeHTML }}
