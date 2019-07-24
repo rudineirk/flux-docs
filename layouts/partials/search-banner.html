@@ -1,3 +1,4 @@
+{{ $bannerTextStroke := default false .Site.Params.bannerTextStroke }}
 {{ $bannerBgImage := default "" .Site.Params.bannerBgImage }}
 {{ $bannerBgCSS := default "" .Site.Params.bannerBgCSS }}
 {{ $sectionTag := "<section class=\"jumbotron text-center banner" }}
@@ -8,7 +9,7 @@
 
 {{ $sectionTag | safeHTML }}
   <div class="container">
-    <h2 class="jumbotron-heading">{{ T "bannerTitle" }}</h2>
+    <h2 class="jumbotron-heading{{ if $bannerTextStroke }} text-stroke{{ end }}">{{ T "bannerTitle" }}</h2>
     {{- partial "search-input.html" (dict "banner" "true" "placeholder" (T "bannerSearchPlaceholder")) -}}
   </div>
 </section>
