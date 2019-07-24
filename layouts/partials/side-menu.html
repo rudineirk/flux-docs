@@ -29,7 +29,7 @@
 {{ define "menu-item" }}
   <li class="nav-item sidebar-link{{ if (hasPrefix .current.RelPermalink .page.RelPermalink) }} active{{ end }}">
     <a class="nav-link" href="{{ .page.RelPermalink }}">
-      {{- partial "icon.html" (dict "icon" .page.Params.icon "color" (default .current.Site.Params.pageIconColor .page.Params.iconColor) "brand" (default false .page.Params.iconbrand)) -}}
+      {{- partial "icon.html" (dict "icon" .page.Params.icon "color" (default (default "#5a5a5a" .current.Site.Params.pageIconColor) .page.Params.iconColor) "brand" (default false .page.Params.iconbrand)) -}}
       {{ .page.Title }}
     </a>
   </li>

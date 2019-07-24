@@ -12,7 +12,7 @@
 
     <div class="dropdown page-sections-select">
       <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
-        {{- partial "icon.html" (dict "icon" $parent.Params.icon "color" (default .Site.Params.pageIconColor $parent.Params.iconColor) "brand" (default false $parent.Params.iconbrand)) -}}
+        {{- partial "icon.html" (dict "icon" $parent.Params.icon "color" (default (default "#5a5a5a" .Site.Params.pageIconColor) $parent.Params.iconColor) "brand" (default false $parent.Params.iconbrand)) -}}
         <span class="page-sections-text">
           {{ T "pageSelectDesc" }}
           <br>
