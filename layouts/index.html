@@ -8,7 +8,7 @@
   <body>
     <div class="flux-docs">
       {{- partial "header.html" . -}}
-      {{ $layout := cond (default false .Site.Params.fluid) (default "section" .Page.Params.layout) (default "home" .Page.Params.layout) }}
+      {{ $layout := default "home" .Page.Params.layout }}
 
       {{ if eq $layout "page" }}
         <div class="content-wrapper">
