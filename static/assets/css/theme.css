@@ -1,6 +1,11 @@
+html {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
 body {
   background-color: transparent;
   min-height: 100vh;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 .flux-docs {
@@ -145,6 +150,7 @@ code {
   color: #2e2e2e;
   background: #FFF7DD;
   border: 1px solid #fbf0cb;
+  font-family: 'Fira Mono', monospace;
 }
 
 pre code {
@@ -941,5 +947,12 @@ pre.chroma {
 .changelog-row .changelog-image img {
   width: 100%;
   cursor: pointer;
+}
+/* ---------------- */
+
+/* mermaid */
+.mermaid .label {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif !important;
+  font-size: 14px !important;
 }
 /* ---------------- */
