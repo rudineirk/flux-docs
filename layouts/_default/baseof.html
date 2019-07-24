@@ -3,6 +3,7 @@
   <head>
     {{- partial "meta.html" . -}}
     {{- partial "style.html" . -}}
+    {{- partial "custom-style.html" -}}
   </head>
   <body>
     {{ $isPage := (or (eq (default "" .Kind) "page") (eq (default "" .Page.Params.layout) "page")) }}
@@ -12,6 +13,7 @@
       {{ block "main" . }}
       {{ end }}
       {{- partial "scripts.html" . -}}
+      {{- partial "custom-scripts.html" -}}
     </div>
   </body>
 </html>

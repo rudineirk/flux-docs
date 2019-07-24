@@ -3,6 +3,7 @@
   <head>
     {{- partial "meta.html" . -}}
     {{- partial "style.html" . -}}
+    {{- partial "custom-style.html" . -}}
   </head>
   <body>
     <div class="flux-docs">
@@ -27,6 +28,7 @@
       {{ end }}
 
       {{- partial "scripts.html" . -}}
+      {{- partial "custom-scripts.html" . -}}
     </div>
   </body>
 </html>
