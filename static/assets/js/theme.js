@@ -56,5 +56,5 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  mermaid.initialize({startOnLoad: false});
+  mermaid.initialize({startOnLoad: true});
 });
