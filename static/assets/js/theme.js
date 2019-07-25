@@ -23,7 +23,7 @@ $(document).ready(function() {
   var msgText = linkCopiedText || "Link copied to clipboard!";
 
   // Add link button for every
-  $("h1~h2,h1~h3,h1~h4,h1~h5,h1~h6").append(function(index, html){
+  $("h2,h3,h4,h5,h6").append(function(index, html){
     var element = $(this);
     var url = encodeURI(document.location.origin + document.location.pathname);
     var link = url + "#"+element[0].id;
