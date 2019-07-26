@@ -351,6 +351,7 @@ pre.chroma {
     top: unset;
     margin-left: 0;
     height: max-content;
+    width: 100%;
   }
 }
 
