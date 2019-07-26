@@ -8,13 +8,16 @@
 {{ $alignClass := cond (ne $align "") (cond (eq $align "left") "mr-auto d-block" (cond (eq $align "right") "ml-auto d-block" "mx-auto d-block")) "" }}
 
 {{ $params := "" }}
-{{ $params = cond (ne $height "") (printf "%s%s%s%s" $params " height=\"" $height "\"") $params }}
-{{ $params = cond (ne $width "") (printf "%s%s%s%s" $params " width=\"" $width "\"") $params }}
 {{ $params = cond (eq $controls "true") (printf "%s%s" $params " controls") $params }}
 {{ $params = cond (eq $muted "true") (printf "%s%s" $params " muted") $params }}
 {{ $params = cond (eq $autoplay "true") (printf "%s%s" $params " autoplay loop") $params }}
 {{ $params = cond (ne $align "") (printf "%s%s%s%s" $params " class=\"" $alignClass "\"") $params }}
-{{ $videoTag := printf "<video playsinline %s>" $params }}
+
+{{ $style := "" }}
+{{ $style = cond (ne $height "") (printf "%s%s%s%s" $style " height: " $height ";") $style }}
+{{ $style = cond (ne $width "") (printf "%s%s%s%s" $style " width: " $width ";") $style }}
+
+{{ $videoTag := printf "<video playsinline style='%s' %s>" $style $params }}
 
 {{ $videoTag | safeHTML }}
   <source src="{{ .Get "url" }}.webm" type="video/webm"/>

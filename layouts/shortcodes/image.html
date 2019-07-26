@@ -7,9 +7,12 @@
 
 {{ $params := "" }}
 {{ $params = cond (ne $alt "") (printf "%s%s%s%s" $params " alt=\"" $alt "\"") $params }}
-{{ $params = cond (ne $height "") (printf "%s%s%s%s" $params " height=\"" $height "\"") $params }}
-{{ $params = cond (ne $width "") (printf "%s%s%s%s" $params " width=\"" $width "\"") $params }}
 {{ $params = cond (ne $align "") (printf "%s%s%s%s" $params " class=\"" $alignClass "\"") $params }}
-{{ $imageTag := printf "<img src='%s' %s />" $url $params }}
+
+{{ $style := "" }}
+{{ $style = cond (ne $height "") (printf "%s%s%s%s" $style " height: " $height ";") $style }}
+{{ $style = cond (ne $width "") (printf "%s%s%s%s" $style " width: " $width ";") $style }}
+
+{{ $imageTag := printf "<img src='%s' style='%s' %s />" $url $style $params }}
 
 {{ $imageTag | safeHTML }}
