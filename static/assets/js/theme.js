@@ -26,7 +26,10 @@ $(document).ready(function() {
   $("h2,h3,h4,h5,h6").append(function(index, html){
     var element = $(this);
     var url = encodeURI(document.location.origin + document.location.pathname);
+    var isCardTitle = element.parent().parent().hasClass('fx-card');
     var link = url + "#"+element[0].id;
+
+    if (isCardTitle) return '';
 
     return " <span class=\"anchor\" data-toggle=\"tooltip\" title=\"\" data-clipboard-text=\"" + link + "\">" +
       "<i class=\"fas fa-link\"></i>" +
