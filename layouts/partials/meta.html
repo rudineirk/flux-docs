@@ -1,5 +1,26 @@
 <title>{{ .Title }} :: {{ .Site.Title }}</title>
+<meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="theme-color" content="#FCFCFC">
+
+<link rel="shortcut icon" type="image/png" href="{{ "assets/favicon.png" | relURL | absURL }}" />
+<link rel="icon" href="{{ "assets/favicon.png" | relURL | absURL }}" sizes="192x192" />
+<link rel="apple-touch-icon" href="{{ "assets/favicon.png" | relURL | absURL }}" />
+<link rel="apple-touch-icon-precomposed" href="{{ "assets/favicon.png" | relURL | absURL }}" />
+<meta name="msapplication-TileImage" content="/assets/favicon.png" />
+
+<meta name="description" content="{{ .Page.Description }}"/>
+<link rel="canonical" href="{{ absURL .RelPermalink }}" />
+
+<meta property="og:locale" content="{{ replace .Site.Params.languageCode "-" "_" }}" />
+<meta property="og:type" content="{{ if .Page.IsHome }}website{{ else }}article{{ end }}" />
+<meta property="og:title" content="{{ .Page.Title }} :: {{ .Site.Title }}" />
+<meta property="og:description" content="{{ .Page.Description }}" />
+<meta property="og:url" content="{{ absURL .RelPermalink }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:image" content="{{ "assets/favicon.png" | relURL | absURL }}" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="{{ .Page.Description }}" />
+<meta name="twitter:title" content="{{ .Page.Title }} :: {{ .Site.Title }}" />
