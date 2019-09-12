@@ -12,16 +12,16 @@
         {{- partial "page-footer.html" . -}}
       </div>
     {{ else }}
-      <div class="{{ if $fluid }}col-xl-2 col-lg-3 col-sm-4{{ else if $fullmenu }}col-md-3{{ else }}col-md-4 order-last{{ end }}">
+      <div class="{{ if $fluid }}col-xl-3 col-sm-4{{ else if $fullmenu }}col-md-3{{ else }}col-xl-3 col-md-4{{ end }}">
         {{ if $fullmenu }}
           {{- partial "side-menu" . -}}
         {{ else }}
           {{- partial "page-side-menu" . -}}
         {{ end }}
       </div>
-      <div class="page-content content-box {{ if $fluid }}col-xl-10 col-lg-9 col-sm-8{{ else }}col-md-8{{ end }} {{ if $centerPageTitle }}page-center-title{{ end }}">
-        {{- partial "tags.html" . -}}
+      <div class="page-content content-box {{ if $fluid }}col-lg-9 col-sm-8{{ else }}col-xl-9 col-md-8{{ end }} {{ if $centerPageTitle }}page-center-title{{ end }}">
         {{- partial "toc.html" . -}}
+        {{- partial "tags.html" . -}}
         {{ .Content }}
         {{- partial "page-footer.html" . -}}
       </div>

@@ -1,10 +1,11 @@
 {{ $isSection := (eq (default .Kind .Page.Params.layout) "section") }}
+{{ $fluid := (default (default false .Site.Params.fluid) .Page.Params.fluid) }}
 {{ $sectionFullmenu := (and $isSection (default false .Site.Params.sectionFullmenu)) }}
 {{ $fullmenu := (default (default false .Site.Params.fullmenu) .Page.Params.fullmenu) }}
 {{ $fullmenu = (or $fullmenu $sectionFullmenu) }}
 
 {{ $page := .Page }}
-<aside class="d-print-none">
+<aside class="d-print-none {{ if not (or $fluid $fullmenu ) }}page-side-menu-aside-lg{{ end }}">
   {{ with .Parent }}
     {{ $parent := cond .Page.IsHome $page .Page }}
     {{ $pages := cond (ne $parent.Sections nil) ($parent.Pages | union $parent.Sections) $parent.Pages }}
