@@ -1,6 +1,6 @@
 {{ $id := now.UnixNano }}
 <div class="changelog-column changelog-image">
-  <a class="lightbox" data-featherlight="#{{ $id }}">
+  <a class="lightbox" href="#" data-featherlight="#{{ $id }}">
     <video id="{{ $id }}" autoplay loop muted playsinline>
       <source src="{{ .Get "url" }}.webm" type="video/webm" />
       <source src="{{ .Get "url" }}.mp4" type="video/mp4" />
