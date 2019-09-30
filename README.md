@@ -24,6 +24,7 @@ it's built on this theme.
 - [x] Expand
 - [ ] Buttons
 - [x] Automatic next/prev buttons to navigate through menu entries
+- [x] Lightbox on images and videos
 - [ ] Attachments files
 - [x] Searchable/paginated tables
 - [x] Roadmap shortcode
