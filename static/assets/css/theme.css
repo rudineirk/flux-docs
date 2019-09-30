@@ -126,6 +126,10 @@ hr {
   width: 100% !important;
 }
 
+a.lightbox {
+  width: inherit;
+}
+
 .datatables {
   display: none;
 }
