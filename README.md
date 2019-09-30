@@ -1,6 +1,6 @@
 # Hugo FluxDocs Theme
 
-![FluxDocs](https://github.com/rudineirk/flux-docs/raw/master/exampleSite/static/img/logo.svg)
+![FluxDocs](https://github.com/rudineirk/flux-docs/raw/master/exampleSite/static/img/logo.png)
 
 This repository contains a theme for [Hugo](https://gohugo.io/) focused mainly
 on documentation pages.
