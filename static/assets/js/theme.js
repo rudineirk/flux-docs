@@ -59,5 +59,9 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+  $('a.lightbox').featherlight({type: 'image'});
+});
+
+$(document).ready(function() {
   mermaid.initialize({startOnLoad: true});
 });

@@ -15,4 +15,6 @@
 
 {{ $imageTag := printf "<img src='%s' style='%s' %s />" $url $style $params }}
 
-{{ $imageTag | safeHTML }}
+<a class="lightbox" data-featherlight="{{ $url }}">
+  {{ $imageTag | safeHTML }}
+</a>

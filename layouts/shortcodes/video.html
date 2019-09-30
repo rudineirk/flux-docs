@@ -1,3 +1,4 @@
+{{ $id := now.UnixNano }}
 {{ $url := .Get "url" }}
 {{ $width := default "" (.Get "width") }}
 {{ $height := default "" (.Get "height") }}
@@ -17,9 +18,11 @@
 {{ $style = cond (ne $height "") (printf "%s%s%s%s" $style " height: " $height ";") $style }}
 {{ $style = cond (ne $width "") (printf "%s%s%s%s" $style " width: " $width ";") $style }}
 
-{{ $videoTag := printf "<video playsinline style='%s' %s>" $style $params }}
+{{ $videoTag := printf "<video id='%d' playsinline style='%s' %s>" $id $style $params }}
 
-{{ $videoTag | safeHTML }}
-  <source src="{{ .Get "url" }}.webm" type="video/webm"/>
-  <source src="{{ .Get "url" }}.mp4" type="video/mp4" />
-</video>
+<a class="lightbox" data-featherlight="#{{ $id }}">
+  {{ $videoTag | safeHTML }}
+    <source src="{{ .Get "url" }}.webm" type="video/webm"/>
+    <source src="{{ .Get "url" }}.mp4" type="video/mp4" />
+  </video>
+</a>

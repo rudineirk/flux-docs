@@ -122,6 +122,10 @@ hr {
   border-bottom: 4px solid #DAE2EA;
 }
 
+.featherlight-content video {
+  width: 100% !important;
+}
+
 .datatables {
   display: none;
 }
