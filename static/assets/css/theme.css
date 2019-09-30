@@ -211,6 +211,10 @@ pre.chroma {
   padding-bottom: 32px;
 }
 
+.page-content > p {
+  width: inherit;
+}
+
 .page-center-title h1:first-of-type {
   text-align: center;
 }
