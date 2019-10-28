@@ -1,5 +1,5 @@
 {{ $fluid := (default (default false .Site.Params.fluid) .Page.Params.fluid) }}
-{{ if (default .Site.Params.autoGenCards true) }}
+{{ if (default true .Site.Params.autoGenCards) }}
 <div class="container{{ if $fluid }}-fluid{{ end }} fx-cards">
   <div class="row">
   {{ range $idx, $page := .Sections.ByWeight }}
