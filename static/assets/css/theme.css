@@ -288,7 +288,8 @@ pre.chroma {
   margin-top: 30px;
 }
 
-.fx-card a {
+.fx-card a,
+.fx-card > div {
   min-height: 250px;
   text-align: center;
   text-decoration: none;
