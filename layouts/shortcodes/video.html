@@ -21,8 +21,8 @@
 {{ $videoTag := printf "<video id='%d' playsinline style='%s' %s>" $id $style $params }}
 
 <a class="lightbox" href="#" data-featherlight="#{{ $id }}">
-  {{ $videoTag | safeHTML }}
-    <source src="{{ .Get "url" }}.webm" type="video/webm"/>
-    <source src="{{ .Get "url" }}.mp4" type="video/mp4" />
-  </video>
+{{ $videoTag | safeHTML }}
+<source src="{{ .Get "url" }}.webm" type="video/webm"/>
+<source src="{{ .Get "url" }}.mp4" type="video/mp4" />
+</video>
 </a>

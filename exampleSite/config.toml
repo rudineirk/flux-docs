@@ -7,10 +7,6 @@ themesdir = "../.."
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
 
-pygmentsCodefences = true
-pygmentsUseClasses = true
-pygmentsCodefencesGuessSyntax = true
-
 [params]
   author = "Rudinei Goi Roecker"
   logoImage = "/img/logo.svg"
@@ -18,10 +14,16 @@ pygmentsCodefencesGuessSyntax = true
   bannerTextLight = true
   pageIconColor = "#333"
 
-  useChroma = true
-
 [outputs]
 home = ["HTML", "JSON"]
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 3
+    startLevel = 1
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [Languages]
 [Languages.en]

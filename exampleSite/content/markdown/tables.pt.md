@@ -37,8 +37,7 @@ tags:
 
 ## Tabela de dados com paginação
 
-<div class="datatables"></div>
-
+{{% datatable %}}
 | Nome | Posição | Escritório | Idade | Data de início | Salário |
 | --- | --- | --- | --- | --- | --- |
 | Tiger Nixon | System Architect | Edinburgh | 61 | 2011/04/25 | $320,800 |
@@ -72,17 +71,18 @@ tags:
 | Fiona Green | Chief Operating Officer (COO) | San Francisco | 48 | 2010/03/11 | $850,000 |
 | Shou Itou | Regional Marketing | Tokyo | 20 | 2011/08/14 | $163,000 |
 | Michelle House | Integration Specialist | Sidney | 37 | 2011/06/02 | $95,400 |
+{{% /datatable %}}
 
 ---
 
 Exemplo:
 
 ```markdown
-<div class="datatables"></div>
-
+{{%/* datatable */%}}
 | Nome | Idade | Informações |
 | --- | --- | --- |
 | Sarah | 28 | Alguma coisa |
 | Bradd | 45 | Algo diferente |
 | Ted | 23 | Outra coisa |
+{{%/* /datatable */%}}
 ```

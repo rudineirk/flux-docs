@@ -22,15 +22,15 @@ tags:
 
 1. Primeiro item
 1. Segundo item
-  1. Primeiro sub-item
-  1. Segundo sub-item
+    1. Primeiro sub-item
+    1. Segundo sub-item
 1. Terceiro sub-item
 
 ```markdown
 1. Primeiro item
 1. Segundo item
-  1. Primeiro sub-item
-  1. Segundo sub-item
+    1. Primeiro sub-item
+    1. Segundo sub-item
 1. Terceiro sub-item
 ```
 
@@ -38,15 +38,15 @@ tags:
 
 * Primeiro item
 * Segundo item
-  * Primeiro sub-item
-  * Segundo sub-item
+    * Primeiro sub-item
+    * Segundo sub-item
 * Terceiro sub-item
 
 ```markdown
 * Primeiro item
 * Segundo item
-  * Primeiro sub-item
-  * Segundo sub-item
+    * Primeiro sub-item
+    * Segundo sub-item
 * Terceiro sub-item
 ```
 

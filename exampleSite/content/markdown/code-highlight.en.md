@@ -40,19 +40,17 @@ main()
 
 ## Usage
 
-<pre><code class="language-markdown">
-Inline code `print(x + "a")` example
+    Inline code `print(x + "a")` example
 
-```python
-# Python example
+    ```python
+    # Python example
+    
+    def sum(a, b):
+        return a + b
 
-def sum(a, b):
-    return a + b
+    def main():
+        result = sum(1, 2)
+        print("result: {0}".format(result))
 
-def main():
-    result = sum(1, 2)
-    print("result: {0}".format(result))
-
-main()
-```
-</code></pre>
+    main()
+    ```
