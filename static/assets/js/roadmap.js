@@ -7,9 +7,7 @@
       return
     }
 
-    let label = change.children[0]
-    if (typeof label === 'undefined') return
-    let checkbox = label.children[0]
+    let checkbox = change.children[0]
     if (typeof checkbox === 'undefined') return
     if (checkbox.checked) {
       change.classList.add('done')
